@@ -47,13 +47,13 @@ ng new myproject --create-application false --style scss --skip-git true --routi
 - [Angular](https://angular.dev/tutorials/learn-angular)
     - [Material](https://material.angular.io/guide/getting-started)
 
-#### building
-- for integration:
-    - ng build --prod --output-path ..\beci\app\static\angular --output-hashing none --watch
-- for testing frontend 
-    - ng build --output-hashing none --watch
 
 ### integration
+
+Directory structure
+ng
+dj
+
 
 
 #### vscode
