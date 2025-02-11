@@ -30,6 +30,11 @@ pip install -r requirements.txt
 Follow detailed instructions from [https://www.django-rest-framework.org/tutorial/quickstart/]
 
 ```sh
+cd dj
+django-admin startproject myproject .
+cd myproject
+django-admin startapp quickstart
+cd ..
 python manage.py migrate
 python manage.py createsuperuser --username admin --email admin@example.com
 ```
@@ -41,7 +46,7 @@ python manage.py createsuperuser --username admin --email admin@example.com
 
 in vscode terminal:
 ```pwsh
-ng new myproject --create-application false --style scss --skip-git true --routing true --directory ngenv --new-project-root myproject
+ng new myproject --create-application false --ssr false --style scss --skip-git true --routing true --directory ng --new-project-root myproject --defaults true --prefix myproject
 ```
 
 - [Angular](https://angular.dev/tutorials/learn-angular)
@@ -50,11 +55,13 @@ ng new myproject --create-application false --style scss --skip-git true --routi
 
 ### integration
 
-Directory structure
-ng
-dj
-
-
+#### Directory structure
+- ng
+    - projects
+        - tutorial
+- dj
+    - myproject
+        - tutorial
 
 #### vscode
 
