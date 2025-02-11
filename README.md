@@ -4,58 +4,49 @@
 
 - Django app with angular material
 
-### python
+- technologies
+[Python][def]  [Django][def]  [Angular][def]
 
-Python is assumed to be installed
-- minimal version 3.11.1
+### Build 
 
-#### virtual environment
+- angular in vscode on Windows
+    - for integration:
+        ```pwsh
+        cd ng
+        ng build --prod --output-path ..\beci\app\static\angular --output-hashing none --watch
+        ```
+    - for testing frontend only:
+        ```pwsh
+        cd ng
+        ng build --output-hashing none --watch
+        ```
+- Django in vscode on windows
+    - for integration with ng
+        ```pwsh
+        cd dj
+        python manage.py collectstatic
+        ```
+    - for testing backend only
+        ```pwsh
+        cd dj
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py collectstatic
+        ```
 
-##### Windows
+### test
 
-```sh
-python.exe -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
+- Angular frontend only in vscode on Windows
+    ```pwsh
+    cd ng
+    ng serve
+    ```
+- Django backend only in vscode on Windows
+    ```pwsh
+    cd dj
+    python.exe .\manage.py runserver
+    ```
 
-- Password: Example1
-
-##### linux
-
-### Django
-
-#### Windows
-
-Follow detailed instructions from [https://www.django-rest-framework.org/tutorial/quickstart/]
-
-```sh
-python manage.py migrate
-python manage.py createsuperuser --username admin --email admin@example.com
-```
- test run: python.exe .\manage.py runserver
-
-### Angular
-
-- node.js and npm are assumed to be installed
-
-in vscode terminal:
-```pwsh
-ng new myproject --create-application false --style scss --skip-git true --routing true --directory ngenv --new-project-root myproject
-```
-
-- [Angular](https://angular.dev/tutorials/learn-angular)
-    - [Material](https://material.angular.io/guide/getting-started)
-
-#### building
-- for integration:
-    - ng build --prod --output-path ..\beci\app\static\angular --output-hashing none --watch
-- for testing frontend 
-    - ng build --output-hashing none --watch
-
-### integration
-
-
-#### vscode
-
-##### tasks
+[def]: /shlomoa/docs/python.md
+[def]: /shlomoa/docs/django.md
+[def]: /shlomoa/docs/angular.md
